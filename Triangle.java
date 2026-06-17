@@ -35,7 +35,8 @@ public class Triangle extends Shape {
 	
 	@Override
 	public double area() {
-		return (side1 + side2 + side3)/2;
+		double s = (side1 + side2 + side3) / 2;
+		return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
 	}
     
     // Step 5: Override the perimeter() method to calculate the perimeter of a triangle
